@@ -1,6 +1,6 @@
-# binolabs type: frontend-only Monkeytype build (no backend, no Firebase,
+# typo: frontend-only Monkeytype build (no backend, no Firebase,
 # no captcha, no ads, no analytics). Built from the repo root:
-#   docker build -f docker/binolabs/Dockerfile -t binolabs-type .
+#   docker build -f docker/binolabs/Dockerfile -t typo .
 FROM node:24.22.1-alpine3.23 AS builder
 WORKDIR /app
 

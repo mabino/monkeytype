@@ -429,7 +429,7 @@ export function updateTitle(title?: string): void {
   const local = isDevEnvironment() ? "localhost - " : "";
 
   if (title === undefined || title === "") {
-    document.title = `${local}binolabs type | a typing test, based on Monkeytype`;
+    document.title = `${local}typo | a typing test, based on Monkeytype`;
   } else {
     document.title = local + title;
   }

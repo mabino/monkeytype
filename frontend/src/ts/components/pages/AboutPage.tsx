@@ -38,7 +38,7 @@ export function AboutPage(): JSXElement {
   return (
     <div class="content-grid grid gap-8">
       <section class="text-center text-sub">
-        binolabs type is a modified build of{" "}
+        typo is a modified build of{" "}
         <a href="https://github.com/monkeytypegame/monkeytype">Monkeytype</a>,
         free software under the{" "}
         <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3</a>.

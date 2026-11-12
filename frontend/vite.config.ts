@@ -128,8 +128,8 @@ function getPlugins({
       injectRegister: null,
       registerType: "autoUpdate",
       manifest: {
-        short_name: "binolabs type",
-        name: "binolabs type",
+        short_name: "typo",
+        name: "typo",
         start_url: "/",
         icons: [
           {

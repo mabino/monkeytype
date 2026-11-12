@@ -12,7 +12,7 @@ export function Logo(): JSXElement {
     <Link
       to="/"
       class="group/logo -m-2 flex h-6 w-max gap-2 rounded-[0.8rem] p-2"
-      aria-label="binolabs type home"
+      aria-label="typo home"
       style={{
         "box-sizing": "content-box",
         "font-family": "Lexend Deca ,sans-serif",
@@ -59,7 +59,7 @@ export function Logo(): JSXElement {
           })}
           data-ui-element="logoText"
         >
-          binolabs type
+          typo
         </h1>
       </div>
     </Link>
