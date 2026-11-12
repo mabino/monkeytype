@@ -8,7 +8,15 @@ WORKDIR /app
 # path that nginx answers with 503, so failed calls never leave the site.
 ENV BACKEND_URL=/api RECAPTCHA_SITE_KEY=""
 
-COPY ["package.json", "pnpm-lock.yaml", "pnpm-workspace.yaml", "turbo.json", "./"]
+RUN npm i -g pnpm@11.21.0
+
+# Dependency download depends only on the lockfile, so this layer stays
+# cached across source changes; a fork edit no longer re-downloads the
+# whole monorepo. pnpm-workspace.yaml carries overrides/allowBuilds.
+COPY ["pnpm-lock.yaml", "pnpm-workspace.yaml", "./"]
+RUN pnpm fetch --frozen-lockfile
+
+COPY ["package.json", "turbo.json", "./"]
 COPY packages packages
 COPY frontend frontend
 
@@ -16,8 +24,8 @@ COPY frontend frontend
 COPY frontend/src/ts/constants/firebase-config-example.ts frontend/src/ts/constants/firebase-config.ts
 COPY frontend/src/ts/constants/firebase-config-example.ts frontend/src/ts/constants/firebase-config-live.ts
 
-RUN npm i -g pnpm@11.21.0 && \
-    pnpm i --frozen-lockfile && \
+# Links from the store fetched above; no registry traffic.
+RUN pnpm i --offline --frozen-lockfile && \
     npm run build
 
 # Static GET /api/configuration: upstream's secure-by-default backend config.
