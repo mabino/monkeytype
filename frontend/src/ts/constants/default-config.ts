@@ -1,9 +1,9 @@
 import { Config, CustomThemeColors } from "@monkeytype/schemas/configs";
 
 const obj: Config = {
-  theme: "serika_dark",
+  theme: "binolabs",
   themeLight: "serika",
-  themeDark: "serika_dark",
+  themeDark: "binolabs",
   autoSwitchTheme: false,
   customTheme: false,
   customThemeColors: [
@@ -80,7 +80,7 @@ const obj: Config = {
   highlightMode: "letter",
   typedEffect: "keep",
   typingSpeedUnit: "wpm",
-  ads: "result",
+  ads: "off",
   hideExtraLetters: false,
   strictSpace: false,
   minAcc: "off",

@@ -60,6 +60,15 @@ export async function init(callback: ReadyCallback): Promise<void> {
     ).firebaseConfig;
 
     readyCallback = callback;
+
+    // binolabs: built without a Firebase project (frontend only, no
+    // accounts). Skip init entirely instead of contacting Google.
+    if (firebaseConfig.apiKey === undefined || firebaseConfig.apiKey === "") {
+      setUserState(null);
+      await callback(false, null);
+      return;
+    }
+
     app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
     Auth = getAuth(app);
 

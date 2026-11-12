@@ -173,6 +173,18 @@ export const themes: Record<ThemeName, Theme> = {
     colorfulErrorExtra: "#640b2c",
     hasCss: true,
   },
+  binolabs: {
+    bg: "#0a0b10",
+    main: "#a78bfa",
+    caret: "#8b5cf6",
+    sub: "#6b7280",
+    subAlt: "#14151d",
+    text: "#f3f4f6",
+    error: "#f87171",
+    errorExtra: "#b91c1c",
+    colorfulError: "#f87171",
+    colorfulErrorExtra: "#b91c1c",
+  },
   bliss: {
     bg: "#262727",
     caret: "#f0d3c9",

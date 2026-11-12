@@ -31,7 +31,6 @@ import { loadFromLocalStorage } from "./config/lifecycle";
 import { boot } from "./boot";
 
 import "./input/hotkeys";
-import { showModal } from "./states/modals";
 import { getLastEventLog } from "./states/test";
 import { buildEventLog } from "./test/events/data";
 
@@ -72,7 +71,13 @@ void fetchLatestVersion().then((data) => {
 
 const accepted = Cookies.getAcceptedCookies();
 if (accepted === null) {
-  showModal("Cookies");
+  // binolabs: only essential storage is used, so there is nothing to consent
+  // to. Record that choice instead of showing the upstream cookie modal.
+  Cookies.setAcceptedCookies({
+    security: true,
+    analytics: false,
+    sentry: false,
+  });
 }
 void init(onAuthStateChanged).then(() => {
   if (accepted !== null) {

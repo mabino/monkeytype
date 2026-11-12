@@ -1,7 +1,5 @@
 import * as ServerConfiguration from "./ape/server-configuration";
 import { configLoadPromise } from "./config/lifecycle";
-import * as MerchBanner from "./elements/merch-banner";
-import * as Psa from "./elements/psa";
 import { authPromise } from "./firebase";
 import { initConnection } from "./states/connection";
 import { setAppReady } from "./states/core";
@@ -11,12 +9,10 @@ import { isDevEnvironment } from "./utils/env";
 export async function boot(): Promise<void> {
   // before awaiting: PSAs show on the first auth state change
   initConnection();
-  Psa.init();
+  // binolabs: no PSAs (they come from the upstream backend).
 
   await configLoadPromise;
   await authPromise;
-
-  MerchBanner.showIfNotClosedBefore();
 
   setAppReady(true);
 

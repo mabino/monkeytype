@@ -8,7 +8,11 @@ let debug = false;
 
 let activated = false;
 
+// binolabs: no error reporting leaves this build.
+const SENTRY_ENABLED = false as boolean;
+
 export async function activateSentry(): Promise<void> {
+  if (!SENTRY_ENABLED) return;
   if (activated) {
     console.warn("Sentry already activated");
     return;

@@ -19,7 +19,11 @@ export async function log(
   }
 }
 
+// binolabs: no analytics leave this build.
+const ANALYTICS_ENABLED = false as boolean;
+
 export function activateAnalytics(): void {
+  if (!ANALYTICS_ENABLED) return;
   if (analytics !== undefined) {
     console.warn("Analytics already activated");
     return;

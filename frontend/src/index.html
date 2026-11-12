@@ -1,10 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="preconnect" href="https://api.monkeytype.com" />
-    <link rel="preconnect" href="https://identitytoolkit.googleapis.com" />
-    <link rel="preconnect" href="https://www.google.com" />
-    <link rel="preconnect" href="https://www.gstatic.com" />
     <link
       rel="preload"
       href="/webfonts/RobotoMono-Regular.woff2"
@@ -27,20 +23,20 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monkeytype | A minimalistic, customizable typing test</title>
+    <title>binolabs type | a typing test, based on Monkeytype</title>
     <!-- fallback theme colors -->
     <style>
       :root {
-        --bg-color: #323437;
-        --main-color: #e2b714;
-        --caret-color: #e2b714;
-        --sub-color: #646669;
-        --sub-alt-color: #2c2e31;
-        --text-color: #d1d0c5;
-        --error-color: #ca4754;
-        --error-extra-color: #7e2a33;
-        --colorful-error-color: #ca4754;
-        --colorful-error-extra-color: #7e2a33;
+        --bg-color: #0a0b10;
+        --main-color: #a78bfa;
+        --caret-color: #8b5cf6;
+        --sub-color: #6b7280;
+        --sub-alt-color: #14151d;
+        --text-color: #f3f4f6;
+        --error-color: #f87171;
+        --error-extra-color: #b91c1c;
+        --colorful-error-color: #f87171;
+        --colorful-error-extra-color: #b91c1c;
         --nav-focus-opacity: 0;
       }
     </style>
@@ -73,19 +69,19 @@
       href="/images/favicon/safari-pinned-tab.svg"
       color="#eee"
     />
-    <meta name="msapplication-TileColor" content="#e2b714" />
+    <meta name="msapplication-TileColor" content="#8b5cf6" />
     <meta
       name="msapplication-config"
       content="/images/favicon/browserconfig.xml"
     />
     <meta
       name="name"
-      content="Monkeytype | A minimalistic, customizable typing test"
+      content="binolabs type | a typing test, based on Monkeytype"
     />
-    <meta name="image" content="https://monkeytype.com/images/mtsocial.png" />
+    <meta name="image" content="/images/mtsocial.png" />
     <meta
       name="description"
-      content="The most customizable typing test website with a minimal design and a ton of features. Test yourself in various modes, track your progress and improve your speed."
+      content="A self-hosted, modified build of Monkeytype (GPL-3.0) by Miodec and contributors, hosted by binolabs. No accounts, no ads, no trackers."
     />
     <!-- <meta
     name="keywords"
@@ -96,28 +92,29 @@
       name="keywords"
       content="typing test, monkeytype, speed test, typing, test, speed"
     />
-    <meta name="author" content="Miodec" />
+    <meta name="author" content="Miodec and Monkeytype contributors; modified by Michael Bino" />
+    <meta name="robots" content="noindex" />
     <meta
       property="og:title"
-      content="Monkeytype | A minimalistic, customizable typing test"
+      content="binolabs type | a typing test, based on Monkeytype"
     />
-    <meta property="og:url" content="https://monkeytype.com/" />
+    <meta property="og:url" content="https://type.binolabs.com/" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://monkeytype.com/images/mtsocial.png"
+      content="/images/mtsocial.png"
     />
     <meta
       property="og:description"
-      content="The most customizable typing test website with a minimal design and a ton of features. Test yourself in various modes, track your progress and improve your speed."
+      content="A self-hosted, modified build of Monkeytype (GPL-3.0) by Miodec and contributors, hosted by binolabs. No accounts, no ads, no trackers."
     />
     <meta
       name="twitter:title"
-      content="Monkeytype | A minimalistic, customizable typing test"
+      content="binolabs type | a typing test, based on Monkeytype"
     />
     <meta
       name="twitter:image"
-      content="https://monkeytype.com/images/mtsocial.png"
+      content="/images/mtsocial.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="darkreader-lock" />
@@ -146,11 +143,6 @@
   <body class="loading">
     <!-- shown without js or css, so it can't be rendered by solid -->
     <load src="html/warnings.html" />
-    <script
-      src="https://www.google.com/recaptcha/api.js?render=explicit"
-      async
-      defer
-    ></script>
     <!-- renders the app after the markup above -->
     <script type="module" src="ts/index.tsx"></script>
   </body>

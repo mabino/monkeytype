@@ -38,6 +38,21 @@ export function AboutPage(): JSXElement {
   return (
     <div class="content-grid grid gap-8">
       <section class="text-center text-sub">
+        binolabs type is a modified build of{" "}
+        <a href="https://github.com/monkeytypegame/monkeytype">Monkeytype</a>,
+        free software under the{" "}
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3</a>.
+        <br />
+        It runs without accounts, ads or trackers. Its source and the list of
+        changes are at{" "}
+        <a href="https://github.com/mabino/monkeytype/tree/binolabs">
+          github.com/mabino/monkeytype
+        </a>
+        .
+        <br />
+        Everything below is about the original Monkeytype project.
+      </section>
+      <section class="text-center text-sub">
         Created with love by Miodec.
         <br />
         <a href="#supporters_title">Supported</a> and{" "}

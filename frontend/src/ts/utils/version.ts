@@ -22,7 +22,9 @@ export async function fetchLatestVersion(): Promise<{
   text: string;
   isNew: boolean;
 } | null> {
-  if (isDevEnvironment()) return null;
+  // binolabs: no GitHub release lookups (the CSP would block them anyway).
+  const GITHUB_VERSION_CHECK = false as boolean;
+  if (!GITHUB_VERSION_CHECK || isDevEnvironment()) return null;
 
   const { data: currentVersion, error } = await tryCatch(
     getLatestReleaseFromGitHub(),

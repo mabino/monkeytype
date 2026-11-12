@@ -128,8 +128,8 @@ function getPlugins({
       injectRegister: null,
       registerType: "autoUpdate",
       manifest: {
-        short_name: "Monkeytype",
-        name: "Monkeytype",
+        short_name: "binolabs type",
+        name: "binolabs type",
         start_url: "/",
         icons: [
           {
@@ -145,9 +145,9 @@ function getPlugins({
             purpose: "any",
           },
         ],
-        background_color: "#323437",
+        background_color: "#0a0b10",
         display: "standalone",
-        theme_color: "#323437",
+        theme_color: "#0a0b10",
       },
       manifestFilename: "manifest.json",
       workbox: {

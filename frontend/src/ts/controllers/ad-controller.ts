@@ -102,8 +102,11 @@ export async function checkCookieblocker(): Promise<void> {
   });
 }
 
+// binolabs: ads are never loaded in this build, whatever Config.ads says.
+const ADS_ENABLED = false as boolean;
+
 export async function reinstate(): Promise<boolean> {
-  if (Config.ads === "off") return false;
+  if (!ADS_ENABLED || Config.ads === "off") return false;
   if (!initialised) {
     init();
     return true;
